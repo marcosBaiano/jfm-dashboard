@@ -1,0 +1,366 @@
+🚀 QUICK REFERENCE - SISTEMA JFM v2.0.0
+
+═══════════════════════════════════════════════════════════════════════════════
+
+URLS IMPORTANTES:
+─────────────────
+Setup:        http://localhost/JFM/setup.php
+Verificação:  http://localhost/JFM/check.php
+Login:        http://localhost/JFM/processos/login.php
+Dashboard:    http://localhost/JFM/dashboard/
+Paradas:      http://localhost/JFM/dashboard/paradas.php
+Eficiência:   http://localhost/JFM/dashboard/eficiencia.php
+OEE:          http://localhost/JFM/dashboard/oee.php
+Relatórios:   http://localhost/JFM/relatorios/
+Admin:        http://localhost/JFM/admin/
+
+═══════════════════════════════════════════════════════════════════════════════
+
+CREDENCIAIS PADRÃO:
+───────────────────
+Email:  admin@jfm.com.br
+Senha:  admin123
+
+⚠️  ALTERE A SENHA APÓS PRIMEIRO LOGIN!
+
+═══════════════════════════════════════════════════════════════════════════════
+
+PASSO A PASSO RÁPIDO:
+────────────────────
+
+1️⃣  Executar Setup
+    http://localhost/JFM/setup.php
+    → Criar tabelas
+    → Criar admin
+    → Testar
+
+2️⃣  Verificar Instalação
+    http://localhost/JFM/check.php
+    → Todos os itens devem estar ✅
+
+3️⃣  Fazer Login
+    http://localhost/JFM/processos/login.php
+    → Email: admin@jfm.com.br
+    → Senha: admin123
+
+4️⃣  Explorar Dashboard
+    http://localhost/JFM/dashboard/
+    → Ver KPIs
+    → Ver gráficos
+
+═══════════════════════════════════════════════════════════════════════════════
+
+FUNÇÕES PRINCIPAIS:
+───────────────────
+
+🔐 Autenticação
+   login.php        → Login com email/senha
+   logout.php       → Sair do sistema
+   auth.php         → Proteção de páginas
+
+📊 Dashboard
+   index.php        → KPIs e gráficos
+   paradas.php      → Lista de paradas
+   velocidade.php   → Controle de velocidade
+   eficiencia.php   → Análise de eficiência
+   oee.php          → Cálculo de OEE
+
+📈 Relatórios
+   producao.php     → Relatório de produção (CSV)
+   paradas.php      → Relatório de paradas (CSV)
+
+⚙️  Administração
+   usuarios.php     → Gerenciar usuários
+   auditoria.php    → Ver log de ações
+
+═══════════════════════════════════════════════════════════════════════════════
+
+PERFIS DE USUÁRIO:
+──────────────────
+
+👑 Administrador
+   ✅ Acesso total
+   ✅ Gerenciar usuários
+   ✅ Ver auditoria
+   ✅ Editar todos os dados
+
+👔 Supervisor
+   ✅ Registrar paradas
+   ✅ Editar todos os dados
+   ✅ Ver relatórios
+   ✅ Sem acesso admin
+
+👨‍💼 Líder
+   ✅ Registrar paradas
+   ✅ Editar próprias paradas
+   ✅ Ver dados
+   ✅ Sem edição geral
+
+👨‍🔧 Operador
+   ✅ Registrar produção
+   ✅ Ver dados
+   ❌ Sem edição
+
+👁️  Visualizador
+   ✅ Apenas visualizar
+   ❌ Sem registro
+   ❌ Sem edição
+
+═══════════════════════════════════════════════════════════════════════════════
+
+FÓRMULAS IMPORTANTES:
+────────────────────
+
+🎯 OEE
+   OEE = Disponibilidade × Performance × Qualidade
+   
+   Disponibilidade = Tempo Produzindo / (Tempo Produzindo + Tempo Parado)
+   Performance = Produção Real / Produção Planejada
+   Qualidade = Produção Boa / Produção Total
+
+📊 Eficiência
+   Eficiência = (Velocidade Real / Velocidade Planejada) × 100
+
+✅ Qualidade
+   Qualidade = (Produção Total - Perdas) / Produção Total × 100
+
+═══════════════════════════════════════════════════════════════════════════════
+
+METAS DE PERFORMANCE:
+────────────────────
+
+🎯 OEE
+   ✅ Excelente: ≥ 85%
+   ⚠️  Bom:      70-85%
+   ❌ Crítico:   < 70%
+
+📊 Eficiência
+   ✅ Excelente: ≥ 90%
+   ⚠️  Bom:      75-90%
+   ❌ Crítico:   < 75%
+
+✅ Qualidade
+   ✅ Excelente: ≥ 95%
+   ⚠️  Bom:      90-95%
+   ❌ Crítico:   < 90%
+
+═══════════════════════════════════════════════════════════════════════════════
+
+BANCO DE DADOS:
+──────────────
+
+Tabelas Principais:
+  usuarios          → Contas de usuário
+  auditoria         → Log de ações
+  historico_edicoes → Rastreamento de edições
+  linhas            → Linhas de produção
+  paradas           → Registros de parada
+  producao          → Produção diária
+  velocidades       → Velocidade planejada/real
+
+Conexão:
+  Host:     localhost
+  Usuário:  root
+  Banco:    paradas
+  Driver:   PDO
+
+═══════════════════════════════════════════════════════════════════════════════
+
+SEGURANÇA:
+─────────
+
+🔒 Proteções Implementadas:
+   ✅ Bcrypt para senhas
+   ✅ PDO prepared statements
+   ✅ Validação de entrada
+   ✅ Escape de saída
+   ✅ Timeout de sessão (30 min)
+   ✅ Log completo
+   ✅ IP rastreado
+   ✅ Permissões por perfil
+
+🚨 Boas Práticas:
+   ✅ Altere senha do admin
+   ✅ Revise auditoria regularmente
+   ✅ Faça backup do banco
+   ✅ Mantenha PHP atualizado
+
+═══════════════════════════════════════════════════════════════════════════════
+
+CONFIGURAÇÕES RÁPIDAS:
+─────────────────────
+
+Tempo de Sessão:
+  Arquivo: includes/auth.php
+  Linha: $inatividade = 30 * 60;  // 30 minutos
+
+Conexão Banco:
+  Arquivo: banco/conexao_pdo.php
+  Linhas: DB_HOST, DB_USER, DB_PASS, DB_NAME
+
+Produção Planejada (OEE):
+  Arquivo: dashboard/oee.php
+  Buscar: $producaoPlanejada
+
+═══════════════════════════════════════════════════════════════════════════════
+
+TROUBLESHOOTING RÁPIDO:
+──────────────────────
+
+Problema              Solução
+─────────────────────────────────────────────────────────────────────────────
+Erro ao conectar      → Verificar credenciais em conexao_pdo.php
+Tabelas não existem   → Executar setup.php
+Sessão expirada       → Normal (30 min). Aumentar em auth.php
+Gráficos não aparecem → Atualizar (Ctrl+F5). Verificar CDN
+Login não funciona    → Verificar banco. Executar setup.php
+Permissão negada      → Verificar perfil em admin/usuarios.php
+Auditoria vazia       → Fazer ações no sistema
+
+═══════════════════════════════════════════════════════════════════════════════
+
+ESTRUTURA DE PASTAS:
+───────────────────
+
+JFM/
+├── admin/             → Gerenciamento
+├── banco/             → Conexão e schema
+├── dashboard/         → Dashboards
+├── includes/          → Componentes reutilizáveis
+├── processos/         → CRUD operations
+├── relatorios/        → Relatórios exportáveis
+├── assets/            → CSS, JS, imagens
+├── setup.php          → Instalação
+├── check.php          → Verificação
+└── documentação/      → README, MANUAL, etc
+
+═══════════════════════════════════════════════════════════════════════════════
+
+ARQUIVOS CRÍTICOS:
+──────────────────
+
+setup.php
+  └─ Execute PRIMEIRO
+  └─ Cria tabelas e admin
+
+check.php
+  └─ Execute para verificar
+  └─ Todos devem estar ✅
+
+login.php
+  └─ Ponto de entrada
+  └─ Autentica usuário
+
+functions.php
+  └─ Funções compartilhadas
+  └─ Usadas em todo sistema
+
+conexao_pdo.php
+  └─ Conexão com banco
+  └─ PDO seguro
+
+auth.php
+  └─ Proteção de páginas
+  └─ Gerencia sessão
+
+═══════════════════════════════════════════════════════════════════════════════
+
+COMANDOS ÚTEIS:
+──────────────
+
+# Verificar PHP
+php -v
+
+# Iniciar servidor (se necessário)
+php -S localhost:8000
+
+# Importar banco via CLI
+mysql -u root paradas < banco/tabelas_novas.sql
+
+# Verificar permissões (Linux)
+chmod 755 JFM/
+chmod 644 JFM/*.php
+
+═══════════════════════════════════════════════════════════════════════════════
+
+DOCUMENTAÇÃO:
+─────────────
+
+📘 README.md
+   → Visão geral do projeto
+   → Pré-requisitos
+   → Instalação básica
+
+📚 MANUAL.md
+   → Como usar cada funcionalidade
+   → Permissões e perfis
+   → Troubleshooting
+
+🔧 INSTALACAO.md
+   → Passo a passo detalhado
+   → Configurações avançadas
+   → Checklist pós-instalação
+
+📋 SUMARIO_EXECUTIVO.md
+   → Resumo das entregas
+   → Estatísticas
+   → Qualidade
+
+📑 INDICE_ARQUIVOS.md
+   → Lista completa de arquivos
+   → Descrição individual
+   → Dependências
+
+═══════════════════════════════════════════════════════════════════════════════
+
+CHEAT SHEET SQL:
+────────────────
+
+# Ver usuários
+SELECT * FROM usuarios;
+
+# Ver auditoria (últimos 10)
+SELECT * FROM auditoria ORDER BY data DESC LIMIT 10;
+
+# Ver paradas do dia
+SELECT * FROM paradas WHERE DATE(inicio) = CURDATE();
+
+# Calcular OEE do dia
+SELECT 
+  (tempo_produzindo / (tempo_produzindo + tempo_parado)) * 100 as disponibilidade,
+  (producao_real / producao_planejada) * 100 as performance,
+  (producao_boa / producao_total) * 100 as qualidade
+FROM dashboard_data WHERE DATE(data) = CURDATE();
+
+═══════════════════════════════════════════════════════════════════════════════
+
+DICAS PROFISSIONAIS:
+───────────────────
+
+1. Monitore auditoria regularmente
+2. Exporte relatórios no final do mês
+3. Revise OEE semanal
+4. Crie backup diário do banco
+5. Altere senhas a cada 3 meses
+6. Use HTTPS em produção
+7. Configure firewall
+8. Mantenha logs
+9. Teste em staging antes
+10. Documente customizações
+
+═══════════════════════════════════════════════════════════════════════════════
+
+CONTATO:
+────────
+
+Email:  suporte@jfm.com.br
+Horário: 08h às 18h
+Resposta: 24h
+
+═════════════════════════════════════════════════════════════════════════════════
+
+Versão: 2.0.0
+Data: 17 de Junho de 2026
+Status: ✅ Produção
+
+═════════════════════════════════════════════════════════════════════════════════

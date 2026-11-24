@@ -1,0 +1,14 @@
+/* =========================================================
+   ARQUIVO LEGADO - MANUTENÇÃO DE COMPATIBILIDADE
+   =========================================================
+   
+   Este arquivo foi consolidado em main.css
+   
+   ⚠️  IMPORTANTE: Use main.css em seus arquivos HTML
+   
+   <link rel="stylesheet" href="/assets/css/main.css">
+   
+   Este arquivo será removido em versões futuras
+*/
+
+@import url('./main.css');

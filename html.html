@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coleta de Indicadores</title>
+ 
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+ 
+body{
+    background:#f4f6f9;
+    padding:20px;
+}
+ 
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+ 
+h1{
+    margin-bottom:20px;
+}
+ 
+.tabs{
+    display:flex;
+    flex-wrap:wrap;
+    gap:5px;
+    margin-bottom:20px;
+}
+ 
+.tab-btn{
+    padding:12px 20px;
+    border:none;
+    cursor:pointer;
+    background:#ddd;
+    border-radius:5px;
+}
+ 
+.tab-btn.active{
+    background:#0d6efd;
+    color:white;
+}
+ 
+.tab-content{
+    display:none;
+    background:white;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+ 
+.tab-content.active{
+    display:block;
+}
+ 
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+ 
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+ 
+label{
+    margin-bottom:5px;
+    font-weight:bold;
+}
+ 
+input{
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+ 
+h2{
+    margin-bottom:20px;
+}
+ 
+button.salvar{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    background:green;
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
+}
+</style>
+</head>
+<body>
+ 
+<div class="container">
+ 
+<h1>Dashboard Executivo - Coleta de Dados</h1>
+ 
+<div class="tabs">
+<button class="tab-btn active" data-tab="pcp">PCP</button>
+<button class="tab-btn" data-tab="logistica">Logística</button>
+<button class="tab-btn" data-tab="dp">DP</button>
+<button class="tab-btn" data-tab="dho">DHO</button>
+<button class="tab-btn" data-tab="seguranca">Segurança</button>
+<button class="tab-btn" data-tab="qualidade">Qualidade</button>
+<button class="tab-btn" data-tab="controladoria">Controladoria</button>
+<button class="tab-btn" data-tab="compras">Compras</button>
+</div>
+ 
+<!-- PCP -->
+<div class="tab-content active" id="pcp">
+<h2>PCP</h2>
+ 
+<div class="form-grid">
+ 
+<div class="form-group">
+<label>Data Referência</label>
+<input type="date">
+</div>
+ 
+<div class="form-group">
+<label>Responsável</label>
+<input type="text">
+</div>
+ 
+<div class="form-group">
+<label>Produção Realizada</label>
+<input type="number">
+</div>
+ 
+<div class="form-group">
+<label>Programação Diária</label>
+<input type="number">
+</div>
+ 
+<div class="form-group">
+<label>Disponibilidade (%)</label>
+<input type="number">
+</div>
+ 
+<div class="form-group">
+<label>Performance (%)</label>
+<input type="number">
+</div>
+ 
+<div class="form-group">
+<label>Qualidade (%)</label>
+<input type="number">
+</div>
+ 
+<div class="form-group">
+<label>Apontamento Produção (R$)</label>
+<input type="number">
+</div>
+ 
+<div class="form-group">
+<label>Inventário (R$)</label>
+<input type="number">
+</div>
+ 
+<div class="form-group">
+<label>Baixas por Movimentação (R$)</label>
+<input type="number">
+</div>
+ 
+<div class="form-group">
+<label>Custo Estrutura Padrão (R$)</label>
+<input type="number">
+</div>
+ 
+</div>
+</div>
+ 
+<!-- LOGÍSTICA -->
+<div class="tab-content" id="logistica">
+<h2>Logística</h2>
+ 
+<div class="form-grid">
+<div class="form-group">
+<label>Valor Fretes CIF (R$)</label>
+<input type="number">
+</div>
+ 
+<div class="form-group">
+<label>Valor Total Fretes (R$)</label>
+<input type="number">
+</div>
+</div>
+</div>
+ 
+<!-- DP -->
+<div class="tab-content" id="dp">
+<h2>Departamento Pessoal</h2>
+ 
+<div class="form-grid">
+ 
+<div class="form-group">
+<label>Horas Planejadas</label>
+<input type="number">
+</div>
+ 
+<div class="form-group">
+<label>Horas Realizadas</label>
+<input type="number">
+</div>
+ 
+<div class="form-group">
+<label>Gastos MOD (R$)</label>
+<input type="number">
+</div>
+ 
+<div class="form-group">
+<label>Caixas Produzidas</label>
+<input type="number">
+</div>
+ 
+<div class="form-group">
+<label>Headcount Médio</label>
+<input type="number">
+</div>
+ 
+</div>
+</div>
+ 
+<!-- DHO -->
+<div class="tab-content" id="dho">
+<h2>DHO</h2>
+ 
+<div class="form-grid">
+<div class="form-group">
+<label>Desligamentos</label>
+<input type="number">
+</div>
+ 
+<div class="form-group">
+<label>HC Médio</label>
+<input type="number">
+</div>
+</div>
+</div>
+ 
+<!-- SEGURANÇA -->
+<div class="tab-content" id="seguranca">
+<h2>Segurança</h2>
+ 
+<div class="form-grid">
+<div class="form-group">
+<label>Nº Acidentes por Ato Inseguro</label>
+<input type="number">
+</div>
+</div>
+</div>
+ 
+<!-- QUALIDADE -->
+<div class="tab-content" id="qualidade">
+<h2>Qualidade</h2>
+ 
+<div class="form-grid">
+ 
+<div class="form-group">
+<label>Ocorrências Procedentes</label>
+<input type="number">
+</div>
+ 
+<div class="form-group">
+<label>Itens Conformes</label>
+<input type="number">
+</div>
+ 
+<div class="form-group">
+<label>Total Itens Auditados</label>
+<input type="number">
+</div>
+ 
+</div>
+</div>
+ 
+<!-- CONTROLADORIA -->
+<div class="tab-content" id="controladoria">
+<h2>Controladoria</h2>
+ 
+<div class="form-grid">
+ 
+<div class="form-group">
+<label>Receita Líquida (R$)</label>
+<input type="number">
+</div>
+ 
+<div class="form-group">
+<label>Lucro Líquido (R$)</label>
+<input type="number">
+</div>
+ 
+</div>
+</div>
+ 
+<!-- COMPRAS -->
+<div class="tab-content" id="compras">
+<h2>Compras</h2>
+ 
+<div class="form-grid">
+ 
+<div class="form-group">
+<label>Preço Anterior</label>
+<input type="number">
+</div>
+ 
+<div class="form-group">
+<label>Preço Negociado</label>
+<input type="number">
+</div>
+ 
+<div class="form-group">
+<label>Volume Comprado</label>
+<input type="number">
+</div>
+ 
+</div>
+</div>
+ 
+<button class="salvar">Salvar</button>
+ 
+</div>
+ 
+<script>
+ 
+const tabs = document.querySelectorAll('.tab-btn');
+const contents = document.querySelectorAll('.tab-content');
+ 
+tabs.forEach(tab => {
+ 
+    tab.addEventListener('click', () => {
+ 
+        tabs.forEach(btn => btn.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active'));
+ 
+        tab.classList.add('active');
+ 
+        document
+        .getElementById(tab.dataset.tab)
+        .classList.add('active');
+ 
+    });
+ 
+});
+ 
+</script>
+ 
+</body>
+</html>

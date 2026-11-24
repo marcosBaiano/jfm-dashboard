@@ -1,0 +1,364 @@
+📖 GUIA DE LEITURA RECOMENDADO - SISTEMA JFM v2.0.0
+
+═════════════════════════════════════════════════════════════════════════════════
+
+COMECE POR AQUI:
+────────────────
+
+1️⃣  Este arquivo (você está aqui)
+     └─ Entender ordem recomendada de leitura
+
+2️⃣  ENTREGA_FINAL.txt (5 min)
+     └─ Ver o que foi entregue
+     └─ Visão geral do projeto
+
+3️⃣  QUICK_REFERENCE.txt (10 min)
+     └─ URLs importantes
+     └─ Credenciais
+     └─ Fórmulas principais
+     └─ Troubleshooting rápido
+
+
+ANTES DE IMPLEMENTAR:
+────────────────────
+
+4️⃣  README.md (15 min)
+     └─ Pré-requisitos
+     └─ Visão geral técnica
+     └─ Instalação básica
+
+5️⃣  INSTALACAO.md (20 min)
+     └─ Passo a passo detalhado
+     └─ Configurações
+     └─ Checklist de pós-instalação
+
+6️⃣  CHECKLIST_VERIFICACAO.txt (30 min)
+     └─ Executar todos os testes
+     └─ Verificar cada funcionalidade
+     └─ Garantir que tudo está OK
+
+
+DURANTE A IMPLEMENTAÇÃO:
+────────────────────────
+
+7️⃣  setup.php (na prática)
+     └─ Execute no navegador
+     └─ Criar tabelas
+     └─ Criar admin
+     └─ Testar login
+
+8️⃣  check.php (na prática)
+     └─ Verificar instalação
+     └─ Todos os items devem estar ✅
+
+
+APRENDENDO O SISTEMA:
+─────────────────────
+
+9️⃣  MANUAL.md (30 min)
+     └─ Como usar cada funcionalidade
+     └─ Permissões e perfis
+     └─ Configurações avançadas
+     └─ Troubleshooting detalhado
+
+🔟  SUMARIO_EXECUTIVO.md (15 min)
+     └─ Resumo das funcionalidades
+     └─ Estatísticas de implementação
+     └─ Qualidade do código
+
+1️⃣1️⃣  VISAO_GERAL.md (20 min)
+     └─ Visão completa do projeto
+     └─ Tudo que foi entregue
+     └─ Como começar
+
+1️⃣2️⃣  INDICE_ARQUIVOS.md (referência)
+     └─ Quando precisar saber sobre um arquivo específico
+
+
+PARA REFERÊNCIA TÉCNICA:
+────────────────────────
+
+📂 Estrutura da Pasta
+     ├─ admin/
+     │  ├─ usuarios.php
+     │  └─ auditoria.php
+     ├─ banco/
+     │  ├─ conexao_pdo.php
+     │  └─ tabelas_novas.sql
+     ├─ dashboard/
+     │  ├─ index.php
+     │  ├─ paradas.php
+     │  ├─ velocidade.php
+     │  ├─ eficiencia.php
+     │  └─ oee.php
+     ├─ includes/
+     │  ├─ auth.php
+     │  ├─ header.php
+     │  ├─ footer.php
+     │  └─ functions.php
+     ├─ processos/
+     │  ├─ login.php
+     │  ├─ logout.php
+     │  ├─ editar_parada.php
+     │  ├─ editar_velocidade.php
+     │  └─ editar_producao.php
+     ├─ relatorios/
+     │  ├─ producao.php
+     │  └─ paradas.php
+     ├─ setup.php
+     ├─ check.php
+     └─ [DOCUMENTAÇÃO]
+
+
+═════════════════════════════════════════════════════════════════════════════════
+
+ROTEIRO DE LEITURA POR PERFIL:
+──────────────────────────────
+
+👑 ADMINISTRADOR DE TI
+─────────────────────
+
+1. README.md (entender arquitetura)
+2. INSTALACAO.md (implementar sistema)
+3. setup.php (criar tabelas)
+4. check.php (verificar instalação)
+5. CHECKLIST_VERIFICACAO.txt (testar tudo)
+6. admin/usuarios.php (criar usuários)
+7. MANUAL.md (referência de funcionalidades)
+8. QUICK_REFERENCE.txt (para dúvidas rápidas)
+
+Tempo estimado: 2 horas
+
+
+👔 GERENTE DE PRODUÇÃO
+──────────────────────
+
+1. MANUAL.md (entender o sistema)
+2. QUICK_REFERENCE.txt (URLs e credenciais)
+3. Fazer login (http://localhost/JFM/processos/login.php)
+4. Explorar Dashboard
+5. Gerar relatórios
+6. Ver auditoria
+7. SUMARIO_EXECUTIVO.md (ver métricas)
+
+Tempo estimado: 1 hora
+
+
+👨‍💻 DESENVOLVEDOR PHP
+──────────────────────
+
+1. README.md (visão geral técnica)
+2. INDICE_ARQUIVOS.md (estrutura de pastas)
+3. Ler arquivo de interesse específico
+4. SUMARIO_EXECUTIVO.md (qualidade do código)
+5. Ler functions.php (funções compartilhadas)
+6. MANUAL.md (usar como referência)
+7. QUICK_REFERENCE.txt (SQL util)
+
+Tempo estimado: 3 horas
+
+
+👨‍🔧 OPERADOR
+──────────────
+
+1. MANUAL.md (especialmente seção de Funcionalidades)
+2. QUICK_REFERENCE.txt (links importantes)
+3. Login com credenciais fornecidas
+4. Explorar dashboard
+5. MANUAL.md (troubleshooting)
+
+Tempo estimado: 30 minutos
+
+
+═════════════════════════════════════════════════════════════════════════════════
+
+CRONOGRAMA DE IMPLEMENTAÇÃO RECOMENDADO:
+──────────────────────────────────────────
+
+DIA 1 - PREPARAÇÃO (2 horas)
+  09:00 - Leitura de README.md
+  09:30 - Leitura de INSTALACAO.md
+  10:00 - Preparar servidor (PHP, MySQL, Apache)
+  10:30 - Café/pausa
+  11:00 - Executar setup.php
+  11:30 - Executar check.php
+  12:00 - Almoço
+
+DIA 1 - TARDE - TESTES (3 horas)
+  14:00 - Começar CHECKLIST_VERIFICACAO.txt
+  14:30 - Teste de login
+  15:00 - Teste de dashboard
+  15:30 - Café/pausa
+  16:00 - Teste de relatórios
+  16:30 - Teste de administração
+  17:00 - Teste de auditoria
+  17:30 - Resumo do dia
+
+DIA 2 - TREINAMENTO (3 horas)
+  09:00 - Leitura de MANUAL.md
+  10:00 - Criar usuários reais
+  10:30 - Café/pausa
+  11:00 - Registrar dados de teste
+  12:00 - Almoço
+  14:00 - Gerar relatórios
+  14:30 - Analisar OEE
+  15:00 - Suporte a usuários
+  16:00 - Documentação local
+  17:00 - Go-live preparação
+
+
+═════════════════════════════════════════════════════════════════════════════════
+
+ARQUIVOS MAIS IMPORTANTES:
+──────────────────────────
+
+🔴 CRÍTICOS (leia primeiro):
+   1. README.md → Entender projeto
+   2. INSTALACAO.md → Implementar
+   3. setup.php → Criar banco
+   4. check.php → Verificar
+
+🟠 IMPORTANTES (leia depois):
+   5. MANUAL.md → Usar sistema
+   6. CHECKLIST_VERIFICACAO.txt → Testar
+   7. QUICK_REFERENCE.txt → Dúvidas rápidas
+
+🟡 COMPLEMENTARES (referência):
+   8. SUMARIO_EXECUTIVO.md → Resumo
+   9. INDICE_ARQUIVOS.md → Detalhes
+   10. VISAO_GERAL.md → Visão completa
+
+
+═════════════════════════════════════════════════════════════════════════════════
+
+FÓRMULAS PRINCIPAIS (rápida consulta):
+──────────────────────────────────────
+
+OEE
+   OEE = Disponibilidade × Performance × Qualidade
+   
+   Disponibilidade = Tempo Produzindo / (Tempo Produzindo + Tempo Parado)
+   Performance = Produção Real / Produção Planejada
+   Qualidade = Produção Boa / Produção Total
+   
+   Metas:
+   ✅ Excelente: ≥ 85%
+   ⚠️  Bom: 70-85%
+   ❌ Crítico: < 70%
+
+Eficiência
+   Eficiência = (Velocidade Real / Velocidade Planejada) × 100
+   
+   Metas:
+   ✅ Excelente: ≥ 90%
+   ⚠️  Bom: 75-90%
+   ❌ Crítico: < 75%
+
+Qualidade
+   Qualidade = (Produção Total - Perdas) / Produção Total × 100
+   
+   Metas:
+   ✅ Excelente: ≥ 95%
+   ⚠️  Bom: 90-95%
+   ❌ Crítico: < 90%
+
+
+═════════════════════════════════════════════════════════════════════════════════
+
+URLS IMPORTANTES (memorizar):
+────────────────────────────
+
+Setup:        http://localhost/JFM/setup.php
+Verificação:  http://localhost/JFM/check.php
+Login:        http://localhost/JFM/processos/login.php
+Dashboard:    http://localhost/JFM/dashboard/
+Admin:        http://localhost/JFM/admin/
+Relatórios:   http://localhost/JFM/relatorios/
+
+
+═════════════════════════════════════════════════════════════════════════════════
+
+CREDENCIAIS PADRÃO (usar no setup):
+──────────────────────────────────
+
+Email:  admin@jfm.com.br
+Senha:  admin123
+
+⚠️  ALTERAR APÓS PRIMEIRO LOGIN!
+
+
+═════════════════════════════════════════════════════════════════════════════════
+
+DICAS DE LEITURA:
+─────────────────
+
+1. Leia em ordem: README → INSTALACAO → CHECKLIST
+2. Não tente entender tudo de uma vez
+3. Consulte QUICK_REFERENCE para dúvidas rápidas
+4. Use MANUAL como referência durante uso
+5. Mantenha CHECKLIST_VERIFICACAO à mão
+6. Imprima QUICK_REFERENCE para consulta rápida
+
+
+═════════════════════════════════════════════════════════════════════════════════
+
+TROUBLESHOOTING RÁPIDO:
+───────────────────────
+
+"Não sei por onde começar"
+→ Comece por README.md
+
+"Não consegui instalar"
+→ Consulte INSTALACAO.md (seção troubleshooting)
+
+"Sistema não funciona"
+→ Execute CHECKLIST_VERIFICACAO.txt
+
+"Como usar o dashboard?"
+→ Leia MANUAL.md
+
+"Preciso de referência rápida"
+→ Use QUICK_REFERENCE.txt
+
+"Preciso de suporte técnico"
+→ Email: suporte@jfm.com.br
+
+
+═════════════════════════════════════════════════════════════════════════════════
+
+PRÓXIMAS ETAPAS APÓS LER TUDO:
+──────────────────────────────
+
+1. Implementar seguindo INSTALACAO.md
+2. Testar seguindo CHECKLIST_VERIFICACAO.txt
+3. Treinar usuários usando MANUAL.md
+4. Documentar customizações locais
+5. Configurar backup automático
+6. Monitorar auditoria
+7. Gerar relatórios mensais
+8. Análise de OEE semanal
+
+
+═════════════════════════════════════════════════════════════════════════════════
+
+CONTATO DE SUPORTE:
+───────────────────
+
+Email:   suporte@jfm.com.br
+Horário: 08h às 18h (seg-sex)
+Resposta: 24h
+
+Informações úteis para suporte:
+  • Versão: 2.0.0
+  • Link do erro
+  • Passo que fez quando ocorreu
+  • Screenshot do erro
+
+
+═════════════════════════════════════════════════════════════════════════════════
+
+Versão: 2.0.0
+Data: 17 de Junho de 2026
+Status: ✅ PRONTO PARA USO
+
+═════════════════════════════════════════════════════════════════════════════════
